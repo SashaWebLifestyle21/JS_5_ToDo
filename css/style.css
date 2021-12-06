@@ -4,15 +4,33 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(190, 180, 168);
+}
+
+.main-section {
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.todo-block {
+  width: calc(100% / 3);
+}
+
 .form {
-  max-width: 500px;
   width: 100%;
-  margin: 0 auto;
   margin-top: 30px;
   padding: 20px 16px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: rgb(148, 22, 165);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .form-group {
@@ -24,10 +42,12 @@
 .inputTitle {
   border: none;
   padding: 5px 5px;
+  border-radius: 5px;
 }
 .inputDescription {
   border: none;
   padding: 5px 5px;
+  border-radius: 5px;
 }
 .formBtn {
   display: block;
@@ -46,7 +66,6 @@
 }
 
 .todo {
-  max-width: 500px;
   width: 100%;
   margin: 0 auto;
   padding: 16px;
@@ -81,6 +100,19 @@
 .deleteButton:hover {
   background-color: rgb(197, 125, 125);
 }
+.nextButton {
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgb(165, 141, 113);
+  color: #fff;
+  transition: background-color 0.3s linear;
+  cursor: pointer;
+}
+.nextButton:hover {
+  background-color: rgb(114, 148, 192);
+}
 .card {
   border: 2px solid #fff;
   padding: 5px 16px;
@@ -93,4 +125,53 @@
   padding: 5px 16px;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+.wrapper {
+  display: none;
+}
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(191, 63, 191, 0.39);
+}
+
+.modal {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border: 2px solid purple;
+  border-radius: 5px;
+  padding: 4rem 1rem;
+  background-color: rgb(148, 22, 165, 0.7);
+}
+
+.roundButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.inProgress-block {
+  width: calc(100% / 3);
+  background-color: rgb(18, 166, 185);
+  padding: 20px 16px;
+  border-radius: 15px;
+}
+
+.inProgress {
+  color: #fff;
 }

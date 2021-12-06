@@ -8,20 +8,47 @@
     <title>Document</title>
 </head>
 <body>
-
-    <form class="form" id="form" action="">
-        <div class="form-group">
-            <input class="inputTitle" type="text" name="" id="inputTitle" placeholder="title">
-            <input class="inputDescription" type="text" name="" id="inputDescription" placeholder="description">
+    <div class="main-section">
+        <div class="todo-block">
+            <form class="form" id="form" action="">
+                <h2 class="title">ToDo</h2>
+                <div class="form-group">
+                    <input class="inputTitle" type="text" name="" id="inputTitle" placeholder="title">
+                    <input class="inputDescription" type="text" name="" id="inputDescription" placeholder="description">
+                </div>
+              
+                <button class="formBtn" id="addCardButton">Add Card</button>
+            </form>
+        
+            <div class="todoList">
+                <div id="todo" class="todo"></div>
+            </div>
         </div>
+        <div class="inProgress-block">
+            <h2 class="title">In Progress</h2>
+            <div class="inProgressList">
+                <div id="inProgress" class="inProgress"></div>
+            </div>
+        </div>
+       
+        
       
-        <button class="formBtn" id="addCardButton">Add Card</button>
-    </form>
-
-    <div class="todoList">
-        <div id="todo" class="todo"></div>
     </div>
     
+    <div class="wrapper">
+        <div class="modal-wrapper">
+            <div class="modal">
+                <button class="roundButton" id="closeButton">X</button>
+                <form action="">
+                    <input class="inputTitle" type="text" name="" id="modalInputTitle" placeholder="title">
+                    <input class="inputDescription" type="text" name="" id="modalInputDescription" placeholder="description">
+                    <button class="formBtn" id="submitBtn">Submit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
     <!-- <div class="card">
         <p class="title"></p>
         <p class="description"></p>
